@@ -1,0 +1,10 @@
+[2017-07-10 11:27:30,878] 初始化出现异常： System.Runtime.InteropServices.COMException (0x80040154): 检索 COM 类工厂中 CLSID 为 {456B23F1-45AF-400D-B508-2E807386A739} 的组件失败，原因是出现以下错误: 80040154 没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 SCSV.AlarmInteract.MainWindow.MainWindow_Loaded(Object sender, RoutedEventArgs e)
+
+[2017-07-10 11:27:41,036] 服务退出
+
