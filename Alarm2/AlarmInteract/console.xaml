@@ -1,0 +1,47 @@
+﻿<Window x:Class="SCSV.AlarmInteract.consoleDesk"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCSV.AlarmInteract"
+        mc:Ignorable="d"
+        Title="console" Height="320" Width="260" Topmost="True"  BorderBrush="Red" BorderThickness="2" ShowInTaskbar = "False" AllowsTransparency="True"  Opacity="0.8"  WindowStyle="None"  ResizeMode="NoResize"   >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Mouse.MouseLeave">
+            <BeginStoryboard>
+                <Storyboard  >
+                    <DoubleAnimation x:Name="DmouseLeave"
+                                          Duration="0:0:1"
+                                          BeginTime="0:0:2"
+                                          Storyboard.TargetProperty="Left"
+                                           />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Mouse.MouseEnter">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation x:Name="DmouseEnter"
+                                          Duration="0:0:0.2"                                         
+                                          Storyboard.TargetProperty="Left"
+                                           />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <StackPanel>
+        <StackPanel  x:Name="list_wating"  ScrollViewer.HorizontalScrollBarVisibility="Hidden"  >
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"  >
+                        <TextBlock  x:Name="num" FontSize="20"   Height="80"  Margin="5"/>
+                        <TextBlock  x:Name="ExtensionTime" FontSize="20"   Height="80"  TextAlignment="Center"  Margin="5"/>
+                        <TextBlock  x:Name="ExtensionStatus"  FontSize="20"   Height="80" TextAlignment="Center"  Margin="5"/>
+                    </StackPanel>
+                   
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </StackPanel >
+        <!--<Button    Click="Textbox_Click"  Height="60 "/>-->
+    </StackPanel>
+</Window>
